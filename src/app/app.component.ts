@@ -1,7 +1,5 @@
-import { DataDistrebuterService } from './data-provider/data-distrebuter.service';
 import { Component } from '@angular/core';
-import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
-import { DataProviderService } from './data-provider/data-provider.service';
+import { UntilDestroy } from '@ngneat/until-destroy';
 
 @UntilDestroy()
 @Component({
@@ -10,12 +8,6 @@ import { DataProviderService } from './data-provider/data-provider.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'Formula';
-  constructor(dataDistrebuterService: DataDistrebuterService) {
-    dataDistrebuterService.voltage.subscribe((data) =>
-      console.log('voltage', data)
-    );
-
-    dataDistrebuterService.rpm.subscribe((data) => console.log('rpm', data));
-  }
+  title = 'TAU Race Car';
+  constructor() {}
 }

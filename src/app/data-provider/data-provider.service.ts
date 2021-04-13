@@ -1,21 +1,24 @@
 import { Injectable } from '@angular/core';
-import { io } from 'socket.io-client';
-import { Observable, Subject } from 'rxjs';
+import { io, Socket } from 'socket.io-client';
+import { Subject, Observable } from 'rxjs';
+import { DefaultEventsMap } from 'socket.io-client/build/typed-events';
 
 @Injectable({
   providedIn: 'root',
 })
 export class DataProviderService {
   // Our socket connection
-  private socket;
+  private socket: Socket<DefaultEventsMap, DefaultEventsMap>;
 
-  recievedData: Subject<{ key: string; value: number }>;
+  private recievedDataSubject: Subject<{ key: string; value: number }>;
+  readonly recievedData: Observable<{ key: string; value: number }>;
 
   constructor() {
-    this.recievedData = new Subject<{ key: string; value: number }>();
+    this.recievedDataSubject = new Subject<{ key: string; value: number }>();
+    this.recievedData = this.recievedDataSubject.asObservable();
     this.socket = io('http://localhost:3000');
     this.socket.on('message', (data: { key: string; value: number }) => {
-      this.recievedData.next(data);
+      this.recievedDataSubject.next(data);
     });
   }
 }
