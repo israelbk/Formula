@@ -1,0 +1,42 @@
+.app-wrapper {
+  background-color: #000000;
+  background-image: linear-gradient(315deg, #000000 0%, #7f8c8d 74%);
+  height: 100vh;
+  width: 100vw;
+}
+
+.main-head {
+  grid-area: header;
+}
+.content {
+  grid-area: content;
+}
+
+.main-footer {
+  grid-area: footer;
+}
+
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  gap: 20px;
+  grid-template-areas:
+    "header"
+    "content"
+    "footer";
+}
+
+@media (min-width: 700px) {
+  .wrapper {
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-areas:
+      "header header  header"
+      "nothing  content nothing"
+      "nothing  content nothing"
+      "footer footer  footer";
+  }
+  nav ul {
+    flex-direction: column;
+  }
+}
