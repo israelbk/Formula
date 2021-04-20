@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-footer',
-  templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.css'],
+  selector: 'app-animated-driving-car',
+  templateUrl: './animated-driving-car.component.html',
+  styleUrls: ['./animated-driving-car.component.css'],
 })
-export class FooterComponent implements OnInit {
+export class AnimatedDrivingCarComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {

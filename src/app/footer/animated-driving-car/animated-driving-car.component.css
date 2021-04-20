@@ -46,6 +46,11 @@ path.air {
   opacity: 0;
 }
 
+.car-margin {
+  margin: 80px;
+  vertical-align: bottom;
+}
+
 /* keyframe animations
 ! be sure to have the animations overlap as to show a realistic behavior
 - as the car moves right the wheels spin faster, the shadow skews left, the dashes of air appear in sequence

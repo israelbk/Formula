@@ -11,7 +11,7 @@ export class DataProviderService {
   private socket: Socket<DefaultEventsMap, DefaultEventsMap>;
 
   private recievedDataSubject: Subject<{ key: string; value: number }>;
-  readonly recievedData: Observable<{ key: string; value: number }>;
+  readonly recievedData: Observable<{ key: string; value: number | boolean }>;
 
   constructor() {
     this.recievedDataSubject = new Subject<{ key: string; value: number }>();

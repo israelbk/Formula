@@ -23,14 +23,14 @@ export class DataDistrebuterService {
   private initBoolObservable(dataKey: string): Observable<boolean> {
     return this.dataProviderService.recievedData.pipe(
       filter((data) => data.key === dataKey),
-      map((filteredData) => filteredData.value === 1)
+      map((filteredData) => filteredData.value == true)
     );
   }
 
   private initNumberOservable(dataKey: string): Observable<number> {
     return this.dataProviderService.recievedData.pipe(
       filter((data) => data.key === dataKey),
-      pluck('value')
+      map((data) => +data.value)
     );
   }
 }
