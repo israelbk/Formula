@@ -1,3 +1,4 @@
+import { ColorToClassPipe } from './indications/colors/color-to-class.pipe';
 import { AnimatedDrivingCarComponent } from './footer/animated-driving-car/animated-driving-car.component';
 import { CarIndicatorComponent } from './indications/car-indicator/car-indicator.component';
 import { NgModule } from '@angular/core';
@@ -11,6 +12,7 @@ import { FooterComponent } from './footer/footer.component';
     FooterComponent,
     CarIndicatorComponent,
     AnimatedDrivingCarComponent,
+    ColorToClassPipe,
   ],
   imports: [BrowserModule],
   providers: [],

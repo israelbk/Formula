@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { COLORS } from '../colors/COLORS.enum';
 
 @Component({
   selector: 'app-car-indicator',
@@ -6,13 +7,8 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./car-indicator.component.css'],
 })
 export class CarIndicatorComponent implements OnInit {
-  @Input() iconPath: string;
+  @Input() color: COLORS;
   constructor() {}
 
   ngOnInit() {}
-
-  //   $( function() {
-  //   var $winHeight = $( window ).height()
-  //   $( '.container' ).height( $winHeight );
-  // });
 }
