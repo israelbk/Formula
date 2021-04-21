@@ -1,0 +1,62 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.bool-indicators {
+    grid-column: 1/2;
+    display: flexbox;
+    flex-direction: row;
+}
+
+.numeric-indicators {
+    grid-column: 2/3;
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* CSS From internet */
+
+html {
+    height: 100%;
+}
+
+body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background: rgba(206, 188, 155, 1);
+    background: -moz-linear-gradient(-45deg, rgba(206, 188, 155, 1) 0%, rgba(85, 63, 50, 1) 51%, rgba(42, 31, 25, 1) 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(206, 188, 155, 1)), color-stop(51%, rgba(85, 63, 50, 1)), color-stop(100%, rgba(42, 31, 25, 1)));
+    background: -webkit-linear-gradient(-45deg, rgba(206, 188, 155, 1) 0%, rgba(85, 63, 50, 1) 51%, rgba(42, 31, 25, 1) 100%);
+    background: -o-linear-gradient(-45deg, rgba(206, 188, 155, 1) 0%, rgba(85, 63, 50, 1) 51%, rgba(42, 31, 25, 1) 100%);
+    background: -ms-linear-gradient(-45deg, rgba(206, 188, 155, 1) 0%, rgba(85, 63, 50, 1) 51%, rgba(42, 31, 25, 1) 100%);
+    background: linear-gradient(135deg, rgba(206, 188, 155, 1) 0%, rgba(85, 63, 50, 1) 51%, rgba(42, 31, 25, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#cebc9b', endColorstr='#2a1f19', GradientType=1);
+}
+
+h1 {
+    /* width: 100%; */
+    margin: 0 auto 0 auto;
+    font-family: 'Lato', sans-serif;
+    /* line-height: 280px; */
+    font-size: 1.5rem;
+    padding: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+}
+
+
+/*	
+========================
+			3D Effect
+========================
+*/
+
+.text3d {
+    color: #70869d;
+    letter-spacing: .15em;
+    text-shadow: -1px -1px 1px #efede3, 0px 1px 0 #2e2e2e, 0px 2px 0 #2c2c2c, 0px 3px 0 #2a2a2a, 0px 4px 0 #282828, 0px 5px 0 #262626, 0px 6px 0 #242424, 0px 7px 0 #222, 0px 8px 0 #202020, 0px 9px 0 #1e1e1e, 0px 10px 0 #1c1c1c, 0px 11px 0 #1a1a1a, 0px 12px 0 #181818, 0px 13px 0 #161616, 0px 14px 0 #141414, 0px 15px 0 #121212, 2px 20px 5px rgba(0, 0, 0, 0.9), 5px 23px 5px rgba(0, 0, 0, 0.3), 8px 27px 8px rgba(0, 0, 0, 0.5), 8px 28px 35px rgba(0, 0, 0, 0.9);
+}

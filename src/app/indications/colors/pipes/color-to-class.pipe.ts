@@ -1,5 +1,5 @@
-import { COLORS } from './COLORS.enum';
 import { Pipe, PipeTransform } from '@angular/core';
+import { COLORS } from '../COLORS.enum';
 
 @Pipe({
   name: 'colorToClass',
