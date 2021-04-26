@@ -11,11 +11,11 @@ export class DataProviderService {
   private socket: Socket<DefaultEventsMap, DefaultEventsMap>;
 
   private recievedDataSubject: Subject<{ key: string; value: number }>;
-  readonly recievedData: Observable<{ key: string; value: number | boolean }>;
+  readonly recievedData$: Observable<{ key: string; value: number | boolean }>;
 
   constructor() {
     this.recievedDataSubject = new Subject<{ key: string; value: number }>();
-    this.recievedData = this.recievedDataSubject.asObservable();
+    this.recievedData$ = this.recievedDataSubject.asObservable();
     this.socket = io('http://localhost:3000');
     this.socket.on('message', (data: { key: string; value: number }) => {
       this.recievedDataSubject.next(data);
