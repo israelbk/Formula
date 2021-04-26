@@ -1,5 +1,5 @@
-<div class="wrapper">
-    <div class="bool-indicators">
+<div class="indicators-wrapper">
+    <div class="indicator bool-indicators">
         <h1 class="text3d">Red-Green indicators</h1>
         <app-bool-car-indicator title="brakes" [color]='(dataDistrebuterService.brake$ |async )|boolToColor'></app-bool-car-indicator>
         <app-bool-car-indicator title="bspd" [color]='(dataDistrebuterService.bspd$|async )|boolToColor'></app-bool-car-indicator>
@@ -7,7 +7,7 @@
         <app-bool-car-indicator title="perror" [color]='(dataDistrebuterService.perror$|async )|boolToColor'></app-bool-car-indicator>
         <app-bool-car-indicator title="terror" [color]='(dataDistrebuterService.terror$|async )|boolToColor'></app-bool-car-indicator>
     </div>
-    <div class="numeric-indicators">
+    <div class="indicator numeric-indicators">
         <h1 class="text3d">numeric indicators</h1>
     </div>
 </div>
