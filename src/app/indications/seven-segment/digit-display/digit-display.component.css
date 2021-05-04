@@ -1,13 +1,10 @@
-body {
+.display {
+    position: relative;
+    /* transform: scale(0.2); */
     background-color: black;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.display {
-    position: relative;
-    transform: scale(0.2);
 }
 
 .hide {
@@ -15,54 +12,54 @@ body {
 }
 
 .segment {
-    height: 125px;
-    width: 15px;
+    height: 25px;
+    width: 3px;
     background-color: #990000;
     border-radius: 9999px;
-    box-shadow: 0px 0px 25px #990000;
+    box-shadow: 0px 0px 5px #990000;
 }
 
 .A {
     position: absolute;
-    top: -45px;
-    left: 90px;
+    top: -9px;
+    left: 18px;
     transform: rotate(90deg);
 }
 
 .B {
     position: absolute;
-    top: 20px;
-    left: 160px;
+    top: 4px;
+    left: 32px;
 }
 
 .C {
     position: absolute;
-    top: 150px;
-    left: 160px;
+    top: 30px;
+    left: 32px;
 }
 
 .D {
     position: absolute;
-    top: 215px;
-    left: 90px;
+    top: 43px;
+    left: 18px;
     transform: rotate(90deg);
 }
 
 .E {
     position: absolute;
-    top: 150px;
-    left: 20px;
+    top: 30px;
+    left: 4px;
 }
 
 .F {
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 4px;
+    left: 4px;
 }
 
 .G {
     position: absolute;
-    top: 85px;
-    left: 90px;
+    top: 17px;
+    left: 18px;
     transform: rotate(90deg);
 }
