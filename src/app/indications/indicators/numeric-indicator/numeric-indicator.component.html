@@ -1,3 +1,8 @@
 <div class="indicator numeric-indicators">
-    <h1 class="text3d">System Data</h1>
+    <h1 class="text3d">numeric indicators</h1>
+    <app-number-display title="speed" [numberToDisplay]='dataDistrebuterService.speed$|async'></app-number-display>
+    <app-number-display pedal="speed" [numberToDisplay]='dataDistrebuterService.pedal$|async'></app-number-display>
+    <app-number-display title="rpm" [numberToDisplay]='dataDistrebuterService.rpm$|async'></app-number-display>
+    <app-number-display title="thorttle" [numberToDisplay]='dataDistrebuterService.thorttle$|async'></app-number-display>
+    <app-number-display title="voltage" [numberToDisplay]='dataDistrebuterService.voltage$|async'></app-number-display>
 </div>
