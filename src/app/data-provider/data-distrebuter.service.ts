@@ -36,10 +36,9 @@ export class DataDistrebuterService {
   private geStream(dataKey: string): Observable<number> {
     const data$ = this.dataProviderService.recievedData$.pipe(
       filter((recievedData) => recievedData.key === dataKey),
-      map((data) => +data.value),
-      distinctUntilChanged()
+      map((data) => +data.value)
     );
 
-    return merge(data$, this.errorObservable$);
+    return merge(data$, this.errorObservable$).pipe(distinctUntilChanged());
   }
 }
