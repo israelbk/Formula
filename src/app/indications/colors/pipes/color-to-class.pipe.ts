@@ -1,21 +1,19 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { COLORS } from '../COLORS.enum';
 
 @Pipe({
-  name: 'colorToClass',
+  name: 'numberToClass',
 })
 export class ColorToClassPipe implements PipeTransform {
-  transform(color: COLORS): string {
-    switch (color) {
-      case COLORS.Green:
+  transform(number: number): string {
+    switch (number) {
+      case 1:
         return 'led-green';
-      case COLORS.Red:
+      case 0:
         return 'led-red';
-      case COLORS.Yellow:
-        return 'led-yellow';
-      case COLORS.White:
-      default:
+      case undefined:
         return 'led-white';
+      default:
+        return 'led-yellow';
     }
   }
 }
