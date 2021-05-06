@@ -1,14 +1,11 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-bool-car-indicator',
   templateUrl: './car-indicator.component.html',
   styleUrls: ['./car-indicator.component.css'],
 })
-export class BoolCarIndicatorComponent implements OnInit {
+export class BoolCarIndicatorComponent {
   @Input() data: number;
   @Input() title: string;
-  constructor() {}
-
-  ngOnInit() {}
 }

@@ -1,11 +1,11 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-number-display',
   templateUrl: './number-display.component.html',
   styleUrls: ['./number-display.component.css'],
 })
-export class NumberDisplayComponent implements OnInit {
+export class NumberDisplayComponent {
   digitArry: number[] = [];
 
   @Input() set numberToDisplay(inputNumber: number) {
@@ -15,8 +15,4 @@ export class NumberDisplayComponent implements OnInit {
   }
 
   @Input() title;
-
-  constructor() {}
-
-  ngOnInit() {}
 }

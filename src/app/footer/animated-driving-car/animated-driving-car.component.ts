@@ -1,22 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-animated-driving-car',
   templateUrl: './animated-driving-car.component.html',
   styleUrls: ['./animated-driving-car.component.css'],
 })
-export class AnimatedDrivingCarComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit() {
+export class AnimatedDrivingCarComponent {
+  constructor() {
     // target all path elements describing the gusts of air around the race car
     const paths = document.querySelectorAll('path.air');
 
-    /*
-for each path update the --stroke-dash property to match the length of the stroke
-! create another property for the negative offset (mostly due to Edge not liking the calc() function with custom properties)
-! include also an increasing delay to animate the path in sequence
-*/
     // add an increasing delay to the animation
     paths.forEach((path: SVGGeometryElement, index) => {
       const totalLength = path.getTotalLength();

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { DataDistrebuterService } from 'src/app/data-provider/data-distrebuter.service';
 
 @Component({
@@ -6,8 +6,6 @@ import { DataDistrebuterService } from 'src/app/data-provider/data-distrebuter.s
   templateUrl: './numeric-indicator.component.html',
   styleUrls: ['./numeric-indicator.component.css'],
 })
-export class NumericIndicatorComponent implements OnInit {
+export class NumericIndicatorComponent {
   constructor(readonly dataDistrebuterService: DataDistrebuterService) {}
-
-  ngOnInit(): void {}
 }
