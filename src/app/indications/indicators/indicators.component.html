@@ -1,13 +1,8 @@
-<div class="indicators-wrapper">
-    <div class="indicator bool-indicators">
-        <h1 class="text3d">Red-Green indicators</h1>
-        <app-bool-car-indicator title="brakes" [color]='(dataDistrebuterService.brake$ |async )|boolToColor'></app-bool-car-indicator>
-        <app-bool-car-indicator title="bspd" [color]='(dataDistrebuterService.bspd$|async )|boolToColor'></app-bool-car-indicator>
-        <app-bool-car-indicator title="cerror" [color]='(dataDistrebuterService.cerror$|async )|boolToColor'></app-bool-car-indicator>
-        <app-bool-car-indicator title="perror" [color]='(dataDistrebuterService.perror$|async )|boolToColor'></app-bool-car-indicator>
-        <app-bool-car-indicator title="terror" [color]='(dataDistrebuterService.terror$|async )|boolToColor'></app-bool-car-indicator>
-    </div>
-    <div class="indicator numeric-indicators">
-        <h1 class="text3d">numeric indicators</h1>
-    </div>
+<div class="indicator bool-indicators">
+    <h1 class="text3d">Operational System</h1>
+    <app-bool-car-indicator title="Brakes" [data]='(dataDistrebuterService.brake$ | async )'></app-bool-car-indicator>
+    <app-bool-car-indicator title="Bspd" [data]='(dataDistrebuterService.bspd$ | async )'></app-bool-car-indicator>
+    <app-bool-car-indicator title="Canbus error" [data]='(dataDistrebuterService.cerror$ | async )'></app-bool-car-indicator>
+    <app-bool-car-indicator title="Pedal error" [data]='(dataDistrebuterService.perror$ | async )'></app-bool-car-indicator>
+    <app-bool-car-indicator title="Throttle error" [data]='(dataDistrebuterService.terror$ | async )'></app-bool-car-indicator>
 </div>

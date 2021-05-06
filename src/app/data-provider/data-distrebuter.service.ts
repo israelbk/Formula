@@ -15,36 +15,25 @@ import { DataProviderService } from './data-provider.service';
 export class DataDistrebuterService {
   private readonly errorObservable$ = this.dataProviderService.recievedData$.pipe(
     switchMap(() => timer(200)),
-    mapTo(null)
+    mapTo(undefined)
   );
 
   // Boolean observables.
-  readonly cerror$ = this.getBoolStream('cerror');
-  readonly brake$ = this.getBoolStream('brake');
-  readonly perror$ = this.getBoolStream('perror');
-  readonly bspd$ = this.getBoolStream('bspd');
-  readonly terror$ = this.getBoolStream('terror');
+  readonly cerror$ = this.geStream('cerror');
+  readonly brake$ = this.geStream('brake');
+  readonly perror$ = this.geStream('perror');
+  readonly bspd$ = this.geStream('bspd');
+  readonly terror$ = this.geStream('terror');
 
   // Number observables.
-  readonly pedal$ = this.getNumberStream('pedal');
-  readonly rpm$ = this.getNumberStream('rpm');
-  readonly speed$ = this.getNumberStream('speed');
-  readonly thorttle$ = this.getNumberStream('thorttle');
-  readonly voltage$ = this.getNumberStream('voltage');
+  readonly pedal$ = this.geStream('pedal');
+  readonly rpm$ = this.geStream('rpm');
+  readonly speed$ = this.geStream('speed');
+  readonly thorttle$ = this.geStream('thorttle');
+  readonly voltage$ = this.geStream('voltage');
 
-  constructor(private dataProviderService: DataProviderService) {}
-
-  private getBoolStream(dataKey: string): Observable<boolean | null> {
-    const data$ = this.dataProviderService.recievedData$.pipe(
-      filter((recievedData) => recievedData.key === dataKey),
-      map((record) => Boolean(record.value)),
-      distinctUntilChanged()
-    );
-
-    return merge(data$, this.errorObservable$);
-  }
-
-  private getNumberStream(dataKey: string): Observable<number> {
+  constructor(private readonly dataProviderService: DataProviderService) {}
+  private geStream(dataKey: string): Observable<number> {
     const data$ = this.dataProviderService.recievedData$.pipe(
       filter((recievedData) => recievedData.key === dataKey),
       map((data) => +data.value),

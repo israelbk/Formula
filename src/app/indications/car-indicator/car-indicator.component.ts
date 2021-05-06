@@ -1,15 +1,11 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { COLORS } from '../colors/COLORS.enum';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-bool-car-indicator',
   templateUrl: './car-indicator.component.html',
   styleUrls: ['./car-indicator.component.css'],
 })
-export class BoolCarIndicatorComponent implements OnInit {
-  @Input() color: COLORS;
+export class BoolCarIndicatorComponent {
+  @Input() data: number;
   @Input() title: string;
-  constructor() {}
-
-  ngOnInit() {}
 }

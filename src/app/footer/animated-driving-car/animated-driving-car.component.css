@@ -47,7 +47,7 @@ path.air {
 }
 
 .car-margin {
-  margin: 80px;
+  margin: 8px 50px;
   vertical-align: bottom;
 }
 
@@ -100,5 +100,21 @@ otherwise the dashes would still be partially visible on firefox and edge (at le
   }
   100% {
     stroke-dashoffset: var(--stroke-dash-negative);
+  }
+}
+
+.track {
+  position  : absolute;
+  animation : track 100s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+  transform : translate3d(0, 0, 0);
+}
+
+@keyframes track {
+  0% {
+    margin-left: 0;
+  }
+
+  100% {
+    margin-left: 100%;
   }
 }
