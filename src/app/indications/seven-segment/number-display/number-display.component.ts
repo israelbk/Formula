@@ -10,7 +10,7 @@ export class NumberDisplayComponent implements OnInit {
 
   @Input() set numberToDisplay(inputNumber: number) {
     this.digitArry = inputNumber
-      ? inputNumber.toString(10).split('').map(Number)
+      ? inputNumber.toString(10).split('').map(Number).reverse()
       : [];
   }
 

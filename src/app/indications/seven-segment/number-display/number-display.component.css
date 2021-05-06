@@ -1,19 +1,26 @@
-.digit {
-    width: 40px;
-    height: 60px;
-}
-
-p {
-    color: white;
-    font-family: cursive;
-    font-size: x-large;
-    text-align: center;
-    margin: 0.5em;
-    margin-left: 30px;
-}
-
-.digits-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
+    .digit {
+        width: 40px;
+        height: 60px;
+    }
+    
+    .number-title {
+        color: white;
+        font-family: cursive;
+        font-size: x-large;
+        text-align: center;
+        margin: 0.5em;
+        margin-left: 30px;
+    }
+    
+    .digits-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-left: 325px;
+    }
+    
+    .digits-only-container {
+        width: 209px;
+        display: flex;
+        direction: rtl;
+    }
