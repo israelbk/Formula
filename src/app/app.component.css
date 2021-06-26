@@ -21,7 +21,12 @@ app-indicators {
 
 app-numeric-indicator {
     margin-top: 4%;
-    flex-basis: 70%;
+    flex-basis: 40%;
+}
+
+app-car-action-buttons {
+    margin-top: 4%;
+    flex-basis: 30%;
 }
 
 app-footer {

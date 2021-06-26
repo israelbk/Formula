@@ -8,7 +8,7 @@ import {
   switchMap,
   tap,
 } from 'rxjs/operators';
-import { DataProviderService } from './data-provider.service';
+import { SocketService } from './socket.service';
 
 @Injectable({
   providedIn: 'root',
@@ -34,7 +34,7 @@ export class DataDistrebuterService {
   readonly thorttle$ = this.geStream('thorttle');
   readonly voltage$ = this.geStream('voltage');
 
-  constructor(private readonly dataProviderService: DataProviderService) {}
+  constructor(private readonly dataProviderService: SocketService) {}
   private geStream(dataKey: string): Observable<number> {
     const data$ = this.dataProviderService.recievedData$.pipe(
       map((data) => data.get(dataKey)),

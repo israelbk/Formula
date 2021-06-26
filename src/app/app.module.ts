@@ -1,3 +1,5 @@
+import { OnOffToggleComponent } from './actions/on-off-toggle/on-off-toggle.component';
+import { CarActionButtonsComponent } from './actions/car-action-buttons/car-action-buttons.component';
 import { NumberDisplayComponent } from './indications/seven-segment/number-display/number-display.component';
 import { IndicatorsComponent } from './indications/indicators/indicators.component';
 import { AnimatedDrivingCarComponent } from './footer/animated-driving-car/animated-driving-car.component';
@@ -21,6 +23,8 @@ import { BoolCarIndicatorComponent } from './indications/car-indicator/car-indic
     NumberDisplayComponent,
     ColorToClassPipe,
     NumericIndicatorComponent,
+    CarActionButtonsComponent,
+    OnOffToggleComponent,
   ],
   imports: [BrowserModule],
   providers: [],

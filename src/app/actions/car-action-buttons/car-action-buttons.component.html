@@ -1,0 +1,22 @@
+<div>
+    <h1 class="text3d">Actions</h1>
+    <div class="buttons-container">
+        <h2>Idle</h2>
+        <button mat-raised-button class="button grey-green" (click)="onPlusIdle()">
+      +
+    </button>
+        <button mat-raised-button class="button grey-red" (click)="onMinusIdle()">
+      -
+    </button>
+    </div>
+    <div class="buttons-container">
+        <h2>Brakes lights</h2>
+        <!-- <button mat-raised-button class="button green">on</button>
+        <button mat-raised-button class="button red">off</button> -->
+        <app-on-off-toggle (toggled)="onBrakeToggle($event)"></app-on-off-toggle>
+    </div>
+
+    <button mat-raised-button class="button single-button red-danger" (click)="onShutCarOff()">
+    Shut Car OFF
+  </button>
+</div>

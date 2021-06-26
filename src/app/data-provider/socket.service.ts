@@ -6,7 +6,7 @@ import { DefaultEventsMap } from 'socket.io-client/build/typed-events';
 @Injectable({
   providedIn: 'root',
 })
-export class DataProviderService {
+export class SocketService {
   // Our socket connection
   private socket: Socket<DefaultEventsMap, DefaultEventsMap>;
 
@@ -20,5 +20,9 @@ export class DataProviderService {
     this.socket.on('message', (data: { key: any; value: number }) => {
       this.recievedDataSubject.next(new Map(Object.entries(data)));
     });
+  }
+
+  sendData(data: string) {
+    this.socket.emit('action', data);
   }
 }

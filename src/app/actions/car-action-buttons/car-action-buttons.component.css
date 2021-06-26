@@ -1,0 +1,91 @@
+h1 {
+    /* width: 100%; */
+    margin: 0 auto 0 auto;
+    font-family: "Lato", sans-serif;
+    /* line-height: 280px; */
+    font-size: 1.5rem;
+    padding: 30px;
+    text-align: left;
+    margin-left: 200px;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+}
+
+
+/*	
+========================
+			3D Effect
+========================
+*/
+
+.text3d {
+    color: red;
+    letter-spacing: 0.15em;
+    text-shadow: -1px -1px 0px white, 0px -5px 35px darkred;
+}
+
+.button {
+    color: white;
+    border-radius: 5px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+    margin: 10px;
+}
+
+.buttons-container {
+    display: block;
+    margin-left: 185px;
+    margin-bottom: 15px;
+    background-color: #313e4a;
+    width: 240px;
+    border-radius: 15px;
+    height: 100px;
+}
+
+.single-button {
+    width: 175px;
+    height: 65px;
+    margin-left: 215px;
+}
+
+.green {
+    background-color: #166d3b;
+    background-image: linear-gradient(147deg, #166d3b 0%, #000000 74%);
+}
+
+.red {
+    background-color: #f71735;
+    background-image: linear-gradient(147deg, #f71735 0%, #db3445 74%);
+}
+
+.grey-green {
+    background-color: #aec5b8;
+    background-image: linear-gradient(147deg, #95ad9f 0%, #3b503a 74%);
+}
+
+.grey-red {
+    background-color: #aec5b8;
+    background-image: linear-gradient(147deg, #95ad9f 0%, #6d2b2b 74%);
+}
+
+.red-danger {
+    background-color: #990000;
+    background-image: linear-gradient(147deg, #990000 0%, #ff0000 74%);
+}
+
+.button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+h2 {
+    color: rgb(214, 210, 210);
+    margin: 0px;
+    margin-right: 10px;
+    text-align: center;
+}
