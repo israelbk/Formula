@@ -22,9 +22,8 @@
 .led-box {
     display: flex;
     flex-direction: row;
-    align-items: center
+    align-items: center;
 }
-
 
 p {
     color: white;
@@ -35,7 +34,7 @@ p {
 }
 
 .led-red {
-    margin:0px 5px 0px 30%;
+    margin: 0px 5px 0px 30%;
     width: 24px;
     height: 24px;
     background-color: #f00;
@@ -114,7 +113,7 @@ p {
 }
 
 .led-yellow {
-    margin:0px 5px 0px 30%;
+    margin: 0px 5px 0px 30%;
     width: 24px;
     height: 24px;
     background-color: #ff0;
@@ -193,7 +192,7 @@ p {
 }
 
 .led-green {
-    margin:0px 5px 0px 30%;
+    margin: 0px 5px 0px 30%;
     width: 24px;
     height: 24px;
     background-color: #abff00;
@@ -202,7 +201,7 @@ p {
 }
 
 .led-white {
-    margin:0px 5px 0px 30%;
+    margin: 0px 5px 0px 30%;
     width: 24px;
     height: 24px;
     background-color: #e9eff0;

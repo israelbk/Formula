@@ -11,9 +11,8 @@ describe('NumberDisplayComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NumberDisplayComponent ]
-    })
-    .compileComponents();
+      declarations: [NumberDisplayComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

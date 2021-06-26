@@ -6,8 +6,6 @@ import { DataDistrebuterService } from 'src/app/data-provider/data-distrebuter.s
   templateUrl: './indicators.component.html',
   styleUrls: ['./indicators.component.css'],
 })
-export class IndicatorsComponent implements OnInit {
+export class IndicatorsComponent {
   constructor(readonly dataDistrebuterService: DataDistrebuterService) {}
-
-  ngOnInit() {}
 }
