@@ -6,6 +6,7 @@ import {
   map,
   mapTo,
   switchMap,
+  tap,
 } from 'rxjs/operators';
 import { DataProviderService } from './data-provider.service';
 
@@ -13,10 +14,11 @@ import { DataProviderService } from './data-provider.service';
   providedIn: 'root',
 })
 export class DataDistrebuterService {
-  private readonly errorObservable$ = this.dataProviderService.recievedData$.pipe(
-    switchMap(() => timer(200)),
-    mapTo(undefined)
-  );
+  private readonly errorObservable$ =
+    this.dataProviderService.recievedData$.pipe(
+      switchMap(() => timer(3000)),
+      mapTo(undefined)
+    );
 
   // Boolean observables.
   readonly cerror$ = this.geStream('cerror');
@@ -35,8 +37,8 @@ export class DataDistrebuterService {
   constructor(private readonly dataProviderService: DataProviderService) {}
   private geStream(dataKey: string): Observable<number> {
     const data$ = this.dataProviderService.recievedData$.pipe(
-      filter((recievedData) => recievedData.key === dataKey),
-      map((data) => +data.value)
+      map((data) => data.get(dataKey)),
+      filter((value) => value != null)
     );
 
     return merge(data$, this.errorObservable$).pipe(distinctUntilChanged());

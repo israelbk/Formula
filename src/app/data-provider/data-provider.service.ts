@@ -10,15 +10,15 @@ export class DataProviderService {
   // Our socket connection
   private socket: Socket<DefaultEventsMap, DefaultEventsMap>;
 
-  private recievedDataSubject: Subject<{ key: string; value: number }>;
-  readonly recievedData$: Observable<{ key: string; value: number }>;
+  private recievedDataSubject: Subject<Map<string, number>>;
+  readonly recievedData$: Observable<Map<string, number>>;
 
   constructor() {
-    this.recievedDataSubject = new Subject<{ key: string; value: number }>();
+    this.recievedDataSubject = new Subject<Map<string, number>>();
     this.recievedData$ = this.recievedDataSubject.asObservable();
     this.socket = io('http://localhost:3000');
-    this.socket.on('message', (data: { key: string; value: number }) => {
-      this.recievedDataSubject.next(data);
+    this.socket.on('message', (data: { key: any; value: number }) => {
+      this.recievedDataSubject.next(new Map(Object.entries(data)));
     });
   }
 }
