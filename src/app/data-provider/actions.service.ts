@@ -26,4 +26,8 @@ export class ActionsService {
   breakOff() {
     this.socketService.sendData('n');
   }
+
+  sendCommand(command: string) {
+    this.socketService.sendData(command);
+  }
 }

@@ -11,6 +11,26 @@ h1 {
     text-rendering: optimizeLegibility;
 }
 
+.input-container {
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.input {
+    background-color: #d2d2d2;
+    color: rgb(49, 36, 36);
+    padding: 11px 20px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.input:hover {
+    background-color: #4d524d;
+}
+
 
 /*	
 ========================
@@ -27,14 +47,17 @@ h1 {
 .button {
     color: white;
     border-radius: 5px;
-    padding: 15px 32px;
     text-align: center;
-    text-decoration: none;
     font-size: 16px;
     display: inline-block;
     width: 100px;
     height: 50px;
     margin: 10px;
+}
+
+.send-button {
+    height: 40px;
+    margin-left: 60px;
 }
 
 .buttons-container {
@@ -76,6 +99,11 @@ h1 {
 .red-danger {
     background-color: #990000;
     background-image: linear-gradient(147deg, #990000 0%, #ff0000 74%);
+}
+
+.grey {
+    background-color: #494848;
+    background-image: linear-gradient(147deg, #beb9b9 0%, #f0dcdc 74%);
 }
 
 .button:hover {

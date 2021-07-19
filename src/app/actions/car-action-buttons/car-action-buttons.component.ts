@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./car-action-buttons.component.css'],
 })
 export class CarActionButtonsComponent implements OnInit {
+  commandText: string;
   constructor(private actionsService: ActionsService) {}
 
   ngOnInit() {}
@@ -26,5 +27,9 @@ export class CarActionButtonsComponent implements OnInit {
   onBrakeToggle(toggleState: boolean) {
     if (toggleState) this.actionsService.breakOn();
     else this.actionsService.breakOff();
+  }
+
+  onSendCommand(command: string) {
+    this.actionsService.sendCommand(command);
   }
 }

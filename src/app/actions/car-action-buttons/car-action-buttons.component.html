@@ -16,6 +16,15 @@
         <app-on-off-toggle (toggled)="onBrakeToggle($event)"></app-on-off-toggle>
     </div>
 
+    <div class="buttons-container">
+        <div class="input-container">
+            <input class="input" (keyup.enter)="onSendCommand(commandText.value)" type="text" #commandText placeholder="Send car command.." name="search" />
+            <button mat-raised-button class="button send-button grey" (click)="onSendCommand(commandText.value)">
+        send
+      </button>
+        </div>
+    </div>
+
     <button mat-raised-button class="button single-button red-danger" (click)="onShutCarOff()">
     Shut Car OFF
   </button>
