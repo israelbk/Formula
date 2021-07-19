@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./number-display.component.css'],
 })
 export class NumberDisplayComponent {
-  digitArry: number[] = [];
+  digitArry: (number | null)[] = [];
 
   @Input() set numberToDisplay(inputNumber: number) {
     this.digitArry = inputNumber

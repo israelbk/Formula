@@ -7,9 +7,9 @@ export class ColorToClassPipe implements PipeTransform {
   transform(number: number): string {
     switch (number) {
       case 1:
-        return 'led-green';
-      case 0:
         return 'led-red';
+      case 0:
+        return 'led-green';
       case undefined:
         return 'led-white';
       default:

@@ -13,6 +13,7 @@ export class BasicNumberIndicatorComponent implements OnInit {
   hideE: boolean;
   hideF: boolean;
   hideG: boolean;
+  hideDot: boolean;
 
   @Input() set digit(inputDigit: number) {
     this.hideAll();
@@ -33,9 +34,16 @@ export class BasicNumberIndicatorComponent implements OnInit {
     this.hideE = true;
     this.hideF = true;
     this.hideG = true;
+    this.hideDot = true;
+
   }
-  private displayByNumber(inputDigit: number) {
+  private displayByNumber(inputDigit: number | null) {
     switch (inputDigit) {
+       default:
+        this.hideDot=false;
+        break;
+
+
       case 0:
         this.hideA = false;
         this.hideB = false;
@@ -114,6 +122,11 @@ export class BasicNumberIndicatorComponent implements OnInit {
         this.hideF = false;
         this.hideG = false;
         break;
+
+      case null:
+        this.hideDot=false;
+        break;
+
     }
   }
 }
